@@ -1,0 +1,49 @@
+{
+  "name": "react-turkey-map",
+  "version": "1.0.0",
+  "types": "dist/cjs/index.d.ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist",
+    "lib",
+    "package.json"
+  ],
+  "scripts": {
+    "build": "rm -rf dist/ && prettier --write lib/** && npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module CommonJS --outDir dist/cjs"
+  },
+  "keywords": [
+    "react",
+    "turkey map",
+    "turkey map component",
+    "turkey map library",
+    "turkey map library for react",
+    "turkey districts map component"
+  ],
+  "description": "",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/novatorsoft/react-turkey-map/issues"
+  },
+  "homepage": "https://github.com/novatorsoft/react-turkey-map#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/novatorsoft/react-turkey-map"
+  },
+  "contributors": [
+    "Novatorsoft <info@novatorsoft.com> (https://github.com/novatorsoft)"
+  ],
+  "author": "Novatorsoft <info@novatorsoft.com> (https://github.com/novatorsoft)",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^19.2.7",
+    "prettier": "^3.7.4",
+    "react": "^19.2.3",
+    "tslib": "^2.8.1",
+    "typescript": "^5.9.3"
+  }
+}
