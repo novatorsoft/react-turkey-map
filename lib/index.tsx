@@ -1,1 +1,2 @@
-export { DistrictMap } from "./components/districtMap";
+export { CityMap } from "./components/cityMap";
+export * from "./enums";
