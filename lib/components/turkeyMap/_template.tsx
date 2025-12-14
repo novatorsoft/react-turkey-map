@@ -12,7 +12,7 @@ export const TurkeyMap: React.FC<ITurkeyMap> = ({
   tooltipComponent: TooltipComponent,
   onClick,
 }) => {
-  const [hoveredCity, setHoveredCity] = useState<string | null>(null);
+  const [hoveredCity, setHoveredCity] = useState<number | null>(null);
   const [tooltip, setTooltip] = useState<{
     cityName: string;
     cityId: number;
@@ -24,7 +24,7 @@ export const TurkeyMap: React.FC<ITurkeyMap> = ({
     cityData: { id: number; name: string },
     event: React.MouseEvent<SVGPathElement>
   ) => {
-    setHoveredCity(cityData.name);
+    setHoveredCity(cityData.id);
     TooltipComponent &&
       setTooltip({
         cityName: cityData.name,
@@ -53,14 +53,13 @@ export const TurkeyMap: React.FC<ITurkeyMap> = ({
 
   const generateCities = () => {
     return turkeyMap.map((cityData, i) => {
-      const isHovered = hoveredCity === cityData.name;
       const element = (
         <path
           key={i}
           id={cityData.name}
           style={{ stroke: strokeColor }}
           d={cityData.path}
-          fill={isHovered ? hoverColor : defaultColor}
+          fill={hoveredCity === cityData.id ? hoverColor : defaultColor}
           onMouseEnter={(e) => handleMouseEnter(cityData, e)}
           onMouseLeave={TooltipComponent ? handlePathMouseLeave : undefined}
           onClick={() =>
@@ -88,7 +87,15 @@ export const TurkeyMap: React.FC<ITurkeyMap> = ({
       </svg>
       {tooltip && TooltipComponent && (
         <Tooltip
-          contentComponent={TooltipComponent}
+          contentComponent={
+            TooltipComponent as React.FC<
+              | {
+                  cityName: string;
+                  plateNumber: number;
+                }
+              | { districtName: string }
+            >
+          }
           position={tooltip}
           props={{ cityName: tooltip.cityName, plateNumber: tooltip.cityId }}
         />
