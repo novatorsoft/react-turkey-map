@@ -13,7 +13,7 @@ export const CityMap: React.FC<ICityMap> = ({ city }) => {
         <path
           key={i}
           id={districtData.name}
-          style={{ stroke: "black" }}
+          style={{ stroke: "white" }}
           d={districtData.d}
           fill="#444"
           // onMouseEnter={(e) => onMouseEnter(e, hoverColor)}
