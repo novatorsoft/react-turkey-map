@@ -5,9 +5,8 @@ import React from "react";
 import { cityMaps } from "../../data";
 
 export const CityMap: React.FC<ICityMap> = ({ city, ...mapProps }) => {
-  const cityNumber =
-    typeof city === "string" ? City[city as keyof typeof City] : city;
-  const cityData = cityMaps[cityNumber];
+  const cityData =
+    cityMaps[typeof city === "string" ? City[city as keyof typeof City] : city];
 
   return (
     <Map
