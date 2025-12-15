@@ -65,6 +65,9 @@
       "requireBranch": "master",
       "tagName": "v${version}"
     },
+    "github": {
+      "release": true
+    },
     "npm": {
       "publish": false
     },
