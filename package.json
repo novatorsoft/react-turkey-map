@@ -1,9 +1,10 @@
 {
-  "name": "react-turkey-map",
+  "name": "react-nvs-turkey-map",
   "version": "1.0.0",
   "types": "dist/cjs/index.d.ts",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
+  "description": "React Turkey Map Component",
   "files": [
     "dist",
     "lib",
@@ -24,7 +25,6 @@
     "turkey map library for react",
     "turkey districts map component"
   ],
-  "description": "",
   "publishConfig": {
     "access": "public"
   },
