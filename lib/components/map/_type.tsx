@@ -15,7 +15,9 @@ export interface IMap {
   strokeWidth?: string;
   hoverColor?: string;
   defaultColor?: string;
-  tooltipComponent?: React.FC<{ districtName: string }>;
+  tooltipComponent?: React.FC<
+    { name: string; plateNumber: number } | { name: string }
+  >;
   onClick?: (
     item: { name: string; plateNumber: number } | { name: string }
   ) => void;

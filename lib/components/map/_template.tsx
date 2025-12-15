@@ -83,15 +83,7 @@ export const Map: React.FC<IMap> = ({
       </svg>
       {tooltip && TooltipComponent && (
         <Tooltip
-          contentComponent={
-            TooltipComponent as React.FC<
-              | {
-                  cityName: string;
-                  plateNumber: number;
-                }
-              | { districtName: string }
-            >
-          }
+          contentComponent={TooltipComponent}
           position={tooltip}
           props={tooltip.props}
         />

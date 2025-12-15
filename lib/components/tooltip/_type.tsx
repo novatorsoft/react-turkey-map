@@ -1,6 +1,6 @@
 export interface ITooltip {
   contentComponent: React.FC<
-    { cityName: string; plateNumber: number } | { districtName: string }
+    { name: string; plateNumber: number } | { name: string }
   >;
   position: {
     x: number;
