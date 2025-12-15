@@ -1,6 +1,6 @@
 {
   "name": "react-nvs-turkey-map",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "types": "dist/cjs/index.d.ts",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
