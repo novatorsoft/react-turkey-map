@@ -1,11 +1,6 @@
 import { City } from "../../enums";
+import { IMap } from "../map";
 
-export interface ICityMap {
+export interface ICityMap extends Omit<IMap, "items" | "viewBox"> {
   city: keyof typeof City | City;
-  strokeColor?: string;
-  strokeWidth?: string;
-  hoverColor?: string;
-  defaultColor?: string;
-  tooltipComponent?: React.FC<{ districtName: string }>;
-  onClick?: ({ districtName }: { districtName: string }) => void;
 }

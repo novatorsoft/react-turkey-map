@@ -62,14 +62,14 @@ export const WithTooltip = {
   args: {
     ...Default.args,
     tooltipComponent: ({
-      cityName,
+      name,
       plateNumber,
     }: {
-      cityName: string;
+      name: string;
       plateNumber: number;
     }) => (
       <div>
-        <div>{cityName}</div>
+        <div>{name}</div>
         <div>{plateNumber}</div>
       </div>
     ),
@@ -81,14 +81,8 @@ export const WithOnClick = {
   render: Template,
   args: {
     ...Default.args,
-    onClick: ({
-      cityName,
-      plateNumber,
-    }: {
-      cityName: string;
-      plateNumber: number;
-    }) => {
-      alert(`${cityName} ${plateNumber}`);
+    onClick: ({ name, plateNumber }: { name: string; plateNumber: number }) => {
+      alert(`${name} ${plateNumber}`);
     },
   },
 };

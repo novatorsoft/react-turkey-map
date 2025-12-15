@@ -84,9 +84,7 @@ export const WithTooltip = {
   render: CityMapWithWrapper,
   args: {
     ...Default.args,
-    tooltipComponent: ({ districtName }: { districtName: string }) => (
-      <div>{districtName}</div>
-    ),
+    tooltipComponent: ({ name }: { name: string }) => <div>{name}</div>,
   },
 };
 
@@ -95,8 +93,8 @@ export const WithOnClick = {
   render: CityMapWithWrapper,
   args: {
     ...Default.args,
-    onClick: ({ districtName }: { districtName: string }) => {
-      alert(districtName);
+    onClick: ({ name }: { name: string }) => {
+      alert(name);
     },
   },
 };
