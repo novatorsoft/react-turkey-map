@@ -7,7 +7,6 @@
   "description": "React Turkey Map Component",
   "files": [
     "dist",
-    "lib",
     "package.json"
   ],
   "scripts": {
