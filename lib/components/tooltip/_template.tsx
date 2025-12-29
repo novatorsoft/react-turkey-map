@@ -12,8 +12,8 @@ export const Tooltip: React.FC<ITooltip> = ({
       {TooltipContentComponent && (
         <TooltipContentComponent
           {...(props as
-            | { districtName: string }
-            | { cityName: string; plateNumber: number })}
+            | { name: string }
+            | { name: string; plateNumber: number })}
         />
       )}
     </TooltipBase>
