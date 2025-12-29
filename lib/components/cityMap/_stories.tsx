@@ -98,3 +98,27 @@ export const WithOnClick = {
     },
   },
 };
+
+export const WithHeatMap = {
+  name: "With Heat Map",
+  render: CityMapWithWrapper,
+  args: {
+    city: 45,
+    heatMapData: {
+      AKHİSAR: 38,
+      ALASEHIR: 72,
+      ALAŞEHİR: 59,
+      SARIGÖL: 94,
+      SALİHLİ: 16,
+      SARUHANLI: 80,
+      SELENDİ: 43,
+      TURGUTLU: 21,
+      GÖRDES: 67,
+      DEMİRCİ: 55,
+      KIRKAĞAÇ: 12,
+      KULA: 77,
+      ŞEHZADELER: 87,
+      YUNUSEMRE: 33,
+    },
+  },
+};

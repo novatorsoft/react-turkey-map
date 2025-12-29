@@ -15,6 +15,11 @@ export interface IMap {
   strokeWidth?: string;
   hoverColor?: string;
   defaultColor?: string;
+  heatMapData?: Record<string, number>;
+  heatMapColors?: {
+    min?: string;
+    max?: string;
+  };
   tooltipComponent?: React.FC<
     { name: string; plateNumber: number } | { name: string }
   >;
