@@ -26,4 +26,5 @@ export interface IMap {
   onClick?: (
     item: { name: string; plateNumber: number } | { name: string }
   ) => void;
+  maxWidth?: string;
 }

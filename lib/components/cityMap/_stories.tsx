@@ -50,9 +50,7 @@ export default {
 };
 
 const CityMapWithWrapper = (args: ICityMap) => (
-  <div style={{ maxWidth: "500px" }}>
-    <CityMap {...args} />
-  </div>
+  <CityMap {...args} maxWidth="700px" />
 );
 
 export const Default = {

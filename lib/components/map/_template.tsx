@@ -1,3 +1,4 @@
+import { MapBase, MapSvg } from "./_style";
 import React, { useMemo, useState } from "react";
 
 import { IMap } from "./_type";
@@ -51,6 +52,7 @@ export const Map: React.FC<IMap> = ({
   },
   tooltipComponent: TooltipComponent,
   onClick,
+  maxWidth,
 }) => {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const [tooltip, setTooltip] = useState<{
@@ -146,16 +148,17 @@ export const Map: React.FC<IMap> = ({
   };
 
   return (
-    <div>
-      <svg
+    <MapBase>
+      <MapSvg
         viewBox={viewBox}
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
         onMouseMove={handleMouseMove}
+        maxWidth={maxWidth}
       >
         <g>{generateBoxes().map((item) => item.element)}</g>
-      </svg>
+      </MapSvg>
       {tooltip && TooltipComponent && (
         <Tooltip
           contentComponent={TooltipComponent}
@@ -163,6 +166,6 @@ export const Map: React.FC<IMap> = ({
           props={tooltip.props}
         />
       )}
-    </div>
+    </MapBase>
   );
 };

@@ -40,9 +40,7 @@ export default {
 };
 
 const Template = (args: ITurkeyMap) => (
-  <div style={{ maxWidth: "1080px" }}>
-    <TurkeyMap {...args} />
-  </div>
+  <TurkeyMap {...args} maxWidth="1080px" />
 );
 
 export const Default = {
