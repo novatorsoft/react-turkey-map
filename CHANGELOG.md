@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.3](///compare/v1.2.2...v1.2.3) (2026-10-09)
+
+### Bug Fixes
+
+* swap names of ŞEHZADELER and YUNUSEMRE in cityMaps data for accurate representation c732d5d
+
 ## [1.2.2](///compare/v1.2.1...v1.2.2) (2026-03-12)
 
 ## [1.2.1](///compare/v1.2.0...v1.2.1) (2025-12-29)
